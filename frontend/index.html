@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordl</title>
+    <link rel="icon" href="logo.svg" sizes="any" type="image/svg+xml">
+    <script src="https://accounts.google.com/gsi/client" async></script>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js" defer></script>
+</head>
+
+<body>
+    <script>
+        async function jwt(response) {
+            document.cookie = `jwt=${response.credential}`;
+            update();
+        }
+    </script>
+    <div id="g_id_onload" data-client_id="REDACTED"
+        data-callback="jwt" data-auto_prompt="false">
+    </div>
+
+    <h1 class="title font">Wordl</h1>
+    <div style="position: relative;">
+        <div id="board">
+        </div>
+        <div id="gid" class="g_id_signin" data-type="standard" data-size="large" data-theme="outline"
+            data-text="sign_in_with" data-shape="rectangular" data-logo_alignment="left" hidden>
+        </div>
+    </div>
+    <p class="font" style="padding-top: 30px;">Игра доступна раз в час с 9 до 16</p>
+
+    <button class="mobile font" onclick="document.getElementById('keyboard').focus()">Открыть клавиатуру</button>
+    <input class="mobile" id="keyboard">
+
+    <table id="leaderboard" class="font">
+
+    </table>
+</body>
+
+</html>

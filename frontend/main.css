@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+	transition: all 250ms linear;
+}
+
+@media only screen and (min-width: 768px) {
+	.mobile {
+		display: none;
+	}
+}
+
+body {
+	background-color: #121213;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+th,
+td {
+	padding: 10px 0 0 10px;
+}
+
+th:first-child,
+td:first-child {
+	padding: 10px 0 0 0;
+}
+
+button {
+	margin-top: 30px;
+	background-color: #618c55;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+button:active {
+	background-color: #5a804f;
+}
+
+.box {
+	font-size: 2rem;
+	border: 1px solid #3a3a3c;
+	margin: 2px;
+	height: 3rem;
+	width: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	user-select: none;
+	transition: all 250ms linear;
+}
+
+.box.CORRECT {
+	border-color: #618c55;
+	background-color: #618c55;
+}
+
+.box.WRONG {
+	border-color: #3a3a3c;
+	background-color: #3a3a3c;
+}
+
+.box.WRONG_SPOT {
+	border-color: #b1a04c;
+	background-color: #b1a04c;
+}
+
+.box:not(:empty) {
+	border-color: #565758;
+}
+
+.font {
+	font-family: "Roboto Mono", monospace;
+	font-weight: 300;
+	font-style: normal;
+	color: white;
+}
+
+.font.title {
+	margin: 30px 0;
+	font-weight: 700;
+	font-size: 4rem;
+}
+
+.row {
+	display: flex;
+}
+
+#gid {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#keyboard {
+	position: absolute;
+	top: 50%;
+	left: -999em;
+	transform: translate(-50%, -50%);
+}
+
+#leaderboard {
+	margin-top: 30px;
+	padding: 5px;
+	border-collapse: collapse;
+	text-align: center;
+}
